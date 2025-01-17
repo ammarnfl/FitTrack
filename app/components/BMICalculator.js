@@ -71,20 +71,20 @@ const BMICalculator = ({ gender, logActivity }) => {
 
   return (
     <View style={styles.container}>
-      <Svg height="300" width="350" style={styles.canvas}>
+      <Svg height="300" width="400" style={styles.canvas}>
         {/* X-axis (Height) */}
         <Line x1="50" y1="250" x2="300" y2="250" stroke="black" strokeWidth="2" />
         <SvgText x="175" y="290" fontSize="12" textAnchor="middle">Height (cm)</SvgText>
         
         {/* Y-axis (Weight) */}
         <Line x1="50" y1="50" x2="50" y2="250" stroke="black" strokeWidth="2" />
-        <SvgText x="10" y="150" fontSize="12" rotation="-90" textAnchor="middle">Weight (kg)</SvgText>
+        <SvgText x="350" y="150" fontSize="12" rotation="0" textAnchor="middle">Weight (kg)</SvgText>
         
         {/* X-axis labels */}
         {[100, 150, 200, 250].map((value, index) => (
           <React.Fragment key={`x-${index}`}>
-            <Line x1={50 + index * 62.5} y1="250" x2={50 + index * 62.5} y2="255" stroke="black" strokeWidth="1" />
-            <SvgText x={50 + index * 62.5} y="270" fontSize="10" textAnchor="middle">
+            <Line x1={50 + index * 83.5} y1="250" x2={50 + index * 83.5} y2="255" stroke="black" strokeWidth="1" />
+            <SvgText x={50 + index * 83.5} y="270" fontSize="10" textAnchor="middle">
               {value}
             </SvgText>
           </React.Fragment>
@@ -93,8 +93,8 @@ const BMICalculator = ({ gender, logActivity }) => {
         {/* Y-axis labels */}
         {[20, 70, 120, 170].map((value, index) => (
           <React.Fragment key={`y-${index}`}>
-            <Line x1="45" y1={250 - index * 50} x2="50" y2={250 - index * 50} stroke="black" strokeWidth="1" />
-            <SvgText x="35" y={255 - index * 50} fontSize="10" textAnchor="end">
+            <Line x1="45" y1={250 - index * 66.5} x2="50" y2={250 - index * 66.5} stroke="black" strokeWidth="1" />
+            <SvgText x="35" y={255 - index * 66.5} fontSize="10" textAnchor="end">
               {value}
             </SvgText>
           </React.Fragment>
